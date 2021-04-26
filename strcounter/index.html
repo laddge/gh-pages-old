@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文字数カウンター</title>
+    <style>
+        * {
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+    <h1>文字数カウンター</h1>
+    <h2 style="font-size: 15px;">文字数をタップ/クリックでコピーされます</h2>
+    </center>
+    <div style="outline: 2px solid #09c; outline-offset: -2px; width: 90%; margin: 0 auto;">
+    <textarea placeholder="Follow me on twitter(@laddge_)!" cols="20" rows="15" style="width: 100%; display: block; border: none; outline: none; background: none; box-sizing: border-box;" onkeyup="ShowLength(value);"></textarea>
+     <div style="text-align: right; padding: 0; margin-left: auto; box-sizing: border-box;"><span id="inputlength" style="background-color: #09c; padding: 0 5px; color: white;" onclick="copy();">count: 0</span></div>
+    </div>
+<script>
+function ShowLength( str ) {
+   document.getElementById("inputlength").innerHTML = 'count: ' + str.length;
+}
+function copy() {
+var text = document.getElementsByTagName("textarea")[0];
+if (text.value .length != 0) {
+    text.select();
+    document.execCommand("copy");
+    alert('Copied!');
+}
+}
+</script>
+</body>
+
+</html>
