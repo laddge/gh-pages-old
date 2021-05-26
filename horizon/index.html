@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>水平線を引こう</title>
+</head>
+<body onclick="mkHr();">
+    <style>
+        body {
+            height: 100vh;
+        }
+        hr {
+            border-width: 3px;
+        }
+    </style>
+    <script>
+        function mkHr() {
+            document.body.innerHTML += '<hr noshade>';
+            Hrs = document.getElementsByTagName('hr');
+            cHr = Hrs[Hrs.length - 1];
+            cHr.style.borderColor = "rgb(" + (~~(256 * Math.random())) + ", " + (~~(256 * Math.random())) + ", " + (~~(256 * Math.random())) + ")";
+        }
+    </script>
+</body>
+</html>
