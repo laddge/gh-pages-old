@@ -1,145 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
     <meta charset="utf-8" />
-    <title>Laddge Pages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laddge Web</title>
+    <link rel="shortcut icon" type="image/png" href="https://github.com/laddge.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        body {
-            margin: 0;
-        }
-        header {
-            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            width: 100%;
-            height: 250px;
-            text-align: center;
-        }
-        header span {
-            font-family: 'Dela Gothic One', cursive;
-            line-height: 250px;
-            font-size: 62px;
-            color: white;
-        }
-        #content {
-            padding: 5%;
-        }
-        #content table {
-            width: 100%;
-            text-align: center;
-        }
-        #content td span {
-            font-size: 50px;
-            font-weight: bold;
-            font-family: sans-serif;
-        }
-        #content p {
-            font-size: 30px;
-            font-family: sans-serif;
-        }
-        .linkcard {
-            width: 100%;
-            height: 200px;
-            border: 3px solid #09c;
-            border-radius: 20px;
-            position: relative;
-            display: table;
-            padding: 0;
-        }
-        .linkcard table {
-            margin: 0;
-            height: 200px;
-        }
-        .linkcard a {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+        .mono {
+            font-family: 'Fira Mono', monospace;
         }
     </style>
-    <link rel="shortcut icon" type="image/png" href="https://github.com/laddge.png"/>
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <span>Laddge Pages</span>
-    </header>
-    <div id="content">
-        <table>
-        <th></th><th></th>
-        <tr>
-        <td width="30%">
-            <img src="https://github.com/laddge.png" style="width: 100%; border-radius: 100%;">
-        </td>
-        <td>
-            <span>どうも、Laddgeです！</span>
-        </td>
-        </tr>
-        </table>
-        <br>
-        <p>
-            普段は、Web開発やプログラミングでLinuxと戯れています。
-        </p>
-        <p>
-            また、日本の高校に通っています。
-        </p>
-        <p>
-            時々ブログも書きます。
-        </p>
-        <div class="linkcard">
-            <table>
-                <tr>
-                <td width="200px" style="color: #09c; font-size: 75px; border-right: 3px solid #09c;">
-                <i class="fas fa-blog"></i>
-                </td>
-                <td>
-                <p style="font-weight: bold; font-size: 40px;">Laddge's Blog</p>
-                <p>https://blog.laddge.tk</p>
-                </td>
-                </tr>
-            </table>
-            <a href="https://blog.laddge.tk"></a>
+<body class="bg-light d-flex flex-column" style="min-height: 100vh;">
+    <div class="flex-row">
+        <div class="bg-dark py-3">
+            <div class="mono h1 mb-0 text-center text-light">
+                <img src="https://github.com/laddge.png" class="rounded-circle" width="100">
+                <div>hello, world</div>
+            </div>
         </div>
-        <p>
-            Twitterもやってます。
-        </p>
-        <div class="linkcard">
-            <table>
-                <tr>
-                <td width="200px" style="color: #09c; font-size: 75px; border-right: 3px solid #09c;">
-                <i class="fab fa-twitter"></i>
-                </td>
-                <td>
-                <p style="font-weight: bold; font-size: 40px;">Laddge</p>
-                <p>@laddge_</p>
-                </td>
-                </tr>
-                <a href="https://twitter.com/laddge_"></a>
-            </table>
+        <div class="row mx-0">
+            <div class="col-md-8 mx-auto bg-white pt-3">
+                <h5 class="text-center py-3">&gt;&gt;&gt; こんにちは，Laddge (らっじ) です。</h5>
+                <h1 class="mono border-bottom border-dark px-2 mb-3">Profile</h1>
+                <div class="mx-3 mb-3">
+                    <li>日本人</li>
+                    <li>17歳</li>
+                    <li>Let's note使い</li>
+                    <li>メイン言語はPython3</li>
+                    <li><a href="https://twitter.com/TGRGroup_PR">TGR Group</a> 所属</li>
+                    <li>Web開発，アプリ開発が好きです</li>
+                </div>
+                <h1 class="mono border-bottom border-dark px-2 mb-3">Works</h1>
+                <div class="mx-3">
+                    <a href="https://timedule.net/" class="showcard mb-3" style="display: block;">Timedule</a>
+                    <a href="https://github.com/laddge/cardAPI" class="showcard mb-3" style="display: block;">cardAPI</a>
+                    <a href="https://api.laddge.tk/github-kusa" class="showcard mb-3" style="display: block;">Github Kusa</a>
+                    <a href="https://github.com/laddge/hr-cli" class="showcard mb-3" style="display: block;">hr-cli</a>
+                    <a href="https://github.com/laddge/InsEmoji.vim" class="showcard mb-3" style="display: block;">InsEmoji.vim</a>
+                    <a href="https://github.com/laddge/phpTweet" class="showcard mb-3" style="display: block;">phpTweet</a>
+                    <a href="https://github.com/laddge/KakeEnMono" class="showcard mb-3" style="display: block;">KakeEnMono</a>
+                </div>
+                <h1 class="mono border-bottom border-dark px-2 mb-3">Accounts</h1>
+                <div class="row mb-3 mx-3">
+                    <a href="https://twitter.com/laddge_" class="card btn mx-3 py-3 col text-center text-dark" style="text-decoration: none;">
+                        <i class="fab fa-twitter h1 mb-0" style="color: #55acee;"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="https://github.com/laddge" class="card btn mx-3 py-3 col text-center text-dark" style="text-decoration: none;">
+                        <i class="fab fa-github h1 mb-0" style="color: #333333;"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://lin.ee/k5jPfbS" class="card btn mx-3 py-3 col text-center text-dark" style="text-decoration: none;">
+                        <i class="fab fa-line h1 mb-0" style="color: #03c755;"></i>
+                        <span>LINE</span>
+                    </a>
+                </div>
+            </div>
         </div>
-        <p>
-            LINEも始めました
-        </p>
-        <div class="linkcard">
-            <table>
-                <tr>
-                <td width="200px" style="color: #09c; font-size: 75px; border-right: 3px solid #09c;">
-                <i class="fab fa-line"></i>
-                </td>
-                <td>
-                <p style="font-weight: bold; font-size: 40px;">Laddge🍣🍊3g+◢</p>
-                </td>
-                </tr>
-                <a href="https://lin.ee/k5jPfbS"></a>
-            </table>
-        </div>
-        <p>
-            よろしくおねがいします。
-        </p>
     </div>
+    <div class="mt-auto bg-dark text-light text-center py-2">
+        <small>© 2021 Laddge</small>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cardapi.laddge.tk/files/cardapi.min.js"></script>
+    <script>
+        let cardAPIInstance = new CardAPI('showcard', '\
+            <div class="card mb-3 col-md-8 mx-auto">\
+                <div class="card-img-top bg-light" style="position: relative; width: 100%; height: 180px;">\
+                    <img src="{{ image }}" style="object-fit: contain; object-position: 50% 0%; position: absolute; width: 100%; height: 100%;">\
+                </div>\
+                <div class="card-body">\
+                    <h5 class="card-title">{{ title }}</h5>\
+                    <p class="card-text">{{ description }}</p>\
+                    <div class="row w-100">\
+                        <div class="col"></div>\
+                        <a href="{{ href }}" class="btn btn-outline-primary col-auto">Open</a>\
+                    </div>\
+                </div>\
+            </div>\
+        ');
+        cardAPIInstance.load();
+    </script>
 </body>
 </html>
