@@ -35,7 +35,7 @@
                 <h1 class="mono border-bottom border-dark px-2 mb-3">Profile</h1>
                 <div class="mx-3 mb-3">
                     <li>日本人</li>
-                    <li>17歳</li>
+                    <li id="age"><noscript>17歳</noscript></li>
                     <li>Let's note使い</li>
                     <li>メイン言語はPython3</li>
                     <li><a href="https://twitter.com/TGRGroup_PR">TGR Group</a> 所属</li>
@@ -72,6 +72,22 @@
     <div class="mt-auto bg-dark text-light text-center py-2">
         <small>© 2021 Laddge</small>
     </div>
+    <script>
+        const birthday = {
+            year: 2004,
+            month: 6,
+            date: 28,
+        };
+        var today = new Date();
+        var thisYearsBirthday = new Date(today.getFullYear(), birthday.month-1, birthday.date);
+        var age = today.getFullYear() - birthday.year;
+        if(today < thisYearsBirthday){
+            age--;
+        }
+        lastBirthday = new Date(birthday.year + age, birthday.month - 1, birthday.date);
+        age = Math.floor((age + (today - lastBirthday) / 31536000000) * 100) / 100;
+        document.getElementById('age').innerText = age + '歳';
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cardapi.laddge.tk/files/cardapi.min.js"></script>
     <script>
