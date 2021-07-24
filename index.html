@@ -51,6 +51,14 @@
                     <a href="https://github.com/laddge/phpTweet" class="showcard mb-3" style="display: block;">phpTweet</a>
                     <a href="https://github.com/laddge/KakeEnMono" class="showcard mb-3" style="display: block;">KakeEnMono</a>
                 </div>
+                <h1 class="mono border-bottom border-dark px-2 mb-3">Access Counter</h1>
+                <div class="mx-3 mb-3">
+                    <p>アクセス数を数えています。</p>
+                    <p>一日のうちで同一IPからのアクセスは数えません。</p>
+                    <p>IPアドレスはアクセス数を数える目的でのみ利用します。</p>
+                    <noscript><p class="text-danger fw-bold">JavaScriptが無効になっています。</p></noscript>
+                    <p class="text-center fw-bold" id="access_count"></p>
+                </div>
                 <h1 class="mono border-bottom border-dark px-2 mb-3">Accounts</h1>
                 <div class="row mb-3 mx-3">
                     <a href="https://twitter.com/laddge_" class="card btn mx-3 py-3 col text-center text-dark" style="text-decoration: none;">
@@ -87,6 +95,24 @@
         lastBirthday = new Date(birthday.year + age, birthday.month - 1, birthday.date);
         age = Math.floor((age + (today - lastBirthday) / 31536000000) * 100) / 100;
         document.getElementById('age').innerText = age + '歳';
+    </script>
+    <script>
+        document.getElementById('access_count').innerHTML = '<span class="text-secondary">Loading...<\/span>';
+        fetch('https://api.laddge.tk/access_counter')
+            .then((response) => {
+                return response.json()
+            })
+            .then((json) => {
+                var text = '<span class="text-primary">アクセス数: ' + json.count + '<\/p>';
+                if (json.new) {
+                    text = '<span class="text-success">アクセス数: ' + json.count + ' (+1)<\/p>';
+                }
+                document.getElementById('access_count').innerHTML = text;
+            })
+            .catch((error) => {
+                console.log(error);
+                document.getElementById('access_count').innerHTML = '<span class="text-danger">取得に失敗しました。<\/span>';
+            });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cardapi.laddge.tk/files/cardapi.min.js"></script>
